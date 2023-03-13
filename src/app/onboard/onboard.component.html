@@ -1,0 +1,52 @@
+<!-- Navigation Bar start -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+  <!--  <a class="navbar-brand" routerLink="/homepage">Employee Management System</a> -->
+  <h2 style="color: rgb(173, 230, 27);">Employee Management System</h2>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb"
+    aria-expanded="true">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navb" class="navbar-collapse collapse hide">
+
+    <ul class="nav navbar-nav ml-auto">
+
+      <!-- <li class="nav-item">
+        <button class="btn-primary" style="margin-left: 10px;" routerLink="/home">Home</button>
+      </li> -->
+     
+      <li class="nav-item">
+        <button class="btn-info" style="margin-left: 10px;" routerLink="/employeelist">Employee List</button>
+      </li>
+      <li class="nav-item">
+        <button class="btn-success" style="margin-left: 10px;" routerLink="/createemployee">Add Employee</button>
+      </li>
+      
+      <li class="nav-item">
+        <button class="btn-primary" style="margin-left: 10px;" [routerLink]="['/home']">Back</button>
+        
+      </li>
+      
+      <li>
+        <!-- <div class="input-group">
+              <mdb-form-control> 
+               <input #input mdbInput type="search" id="form1" class="form-control" />
+                <label mdbLabel class="form-label" for="form1">Search</label>
+               </mdb-form-control>
+              <button type="button" class="btn btn-primary" (click)="search(input.value)">
+                <i class="fas fa-search"></i>
+              </button>
+            </div> -->
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Navigation Bar End -->
+<!-- Start of homepage design section -->
+
+<div class="bg">
+  <h1 > Welcome Onboarding</h1>
+  <style>h1{text-align: center;
+  color: rgb(13, 237, 35);
+  }</style>
+</div>
+<router-outlet></router-outlet>

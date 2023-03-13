@@ -1,0 +1,55 @@
+<h2>List Of Employees</h2>
+<div>
+ 
+    <button class="btn-primary" style="margin-left: 10px;" [routerLink]="['/onboard']">Back</button>
+    <button class="btn-info" style="margin-left: 10px;" [routerLink]="['/excelsheet']">Upload</button>
+    <button class="btn-success" style="margin-left: 10px;" [routerLink]="['/download']">Download</button>
+    
+   
+<!-- <app-search (searchtextchanged)="onsearchtextentred($event)"></app-search>
+  -->
+    <table class="table">
+  
+    <thead>
+        <tr>
+            <th>Employee Id<th><br>
+            <th>Employee Name<th><br>
+            <th>Email Id</th><br>
+            <th>Designation</th><br>
+            <th>Grade</th><br><br>&nbsp;
+            <th>Resource Type</th><br>&nbsp;
+            <th>Joining Date</th><br>
+            <th>Total Experinces</th>&nbsp;&nbsp;
+            <th>Reporting Manager</th><br>
+            <th>Current Location</th><br>
+            <th>Current Allocation</th><br><br>
+            <th>Project</th>&nbsp;&nbsp;&nbsp;
+            <th>Actions</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let Employee of employees">
+            <td style="width: 10%;">{{Employee.employeeId}}</td><br>
+            <td>{{Employee.employeeName}}</td><br>
+            <td>{{Employee.email}}</td><br>
+            <td>{{Employee.designation}}</td><br>
+            <td>{{Employee.grade}}</td><br>
+            <td>{{Employee.resourceType}}</td><br>
+            <td>{{Employee.doj}}</td><br>
+            <td>{{Employee.totalExp}}</td><br>
+            <td>{{Employee.irm}}</td><br>
+            <td>{{Employee.currentLocation}}</td><br>
+            <td>{{Employee.currentAllocation}}</td><br>&nbsp;
+            <td>{{Employee.project}}</td><br><br>
+           <th>
+                <button (click)="employeeDetails(Employee.employeeId)" class="btn btn-primary btn-sm" style="margin-left: 10px;"> View</button><br>
+                <button (click)="updateEmployee(Employee.employeeId)" class="btn btn-info btn-sm"style="margin-left: 10px;"> Edit</button><br>
+                <button (click)="deleteEmployee(Employee.employeeId)" class="btn btn-danger btn-sm"style="margin-left: 10px;,width:10%;">Delete</button><br>
+                
+            </th>
+        </tr>
+       
+        </tbody>
+</table>
+</div>

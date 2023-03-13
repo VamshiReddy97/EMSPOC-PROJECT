@@ -1,0 +1,120 @@
+<h3>Onboarding Employee</h3>
+<button class="btn-primary" style="margin-left: 20px;" [routerLink]="['/onboard']">Back</button>
+
+<div class="form" >
+  
+    <form (ngSubmit)="onSubmit()">
+  
+        <div class="col-md-6">
+          
+            <label for="employeeId">Employee Id:</label>
+            <input type="userName" class="form-control" placeholder="Enter Id" name="employeeId"[(ngModel)]="employee.employeeId" required #employeeId="ngModel"
+            [class.is-invalid]="employeeId.invalid && employeeId.touched " >
+            <small class="text-danger"[class.d-none]="employeeId.valid || employeeId.untouched ">EmployeeId is required </small>
+          </div>
+          
+
+       <div class="col-md-6">
+        <label for="employeeName">Employee Name:</label>
+        <input type="employeeName" class="form-control" placeholder="Enter Name" name="employeeName"[(ngModel)]="employee.employeeName" required #employeeName="ngModel"
+        [class.is-invalid]="employeeName.invalid && employeeName.touched " >
+        <small class="text-danger"[class.d-none]="employeeName.valid || employeeName.untouched ">Employee Name is required </small>
+      </div>
+
+      <div class="col-md-6">
+        <label for="email">Email Id:</label>
+        <input type="email" class="form-control" placeholder="Enter email id" name="email"[(ngModel)]="employee.email" required #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched " >
+        <small class="text-danger"[class.d-none]="email.valid || email.untouched ">Email id  is required </small>
+      </div>
+
+      <div class="col-md-6">
+        <label for="designation">Designation:</label>
+        <input type="designation" class="form-control" placeholder="Enter designation" name="designation"[(ngModel)]="employee.designation" required #designation="ngModel"
+        [class.is-invalid]="designation.invalid && designation.touched " >
+        <small class="text-danger"[class.d-none]="designation.valid || designation.untouched ">Designation is required </small>
+      </div>
+
+      <div class="col-md-6">
+        <label for="grade">Grade:</label>
+        <select class="form-control" placeholder="Enter grade" name="grade"[(ngModel)]="employee.grade" required #grade="ngModel"
+        [class.is-invalid]="grade.invalid && grade.touched " >
+        <small class="text-danger"[class.d-none]="grade.valid || grade.untouched ">Grade is required </small>
+        <option>B.Tech</option>
+        <option>M.Tech</option>
+        <option>Degree</option>
+        <option>MBA</option>
+        </select></div>
+
+        <div class="col-md-6">
+        <label for="resourceType">ResourceType:</label>
+        <input type="resourceType" class="form-control" placeholder="Enter resourceType" name="resourceType"[(ngModel)]="employee.resourceType" required #resourceType="ngModel"
+        [class.is-invalid]="resourceType.invalid && resourceType.touched " >
+        <small class="text-danger"[class.d-none]="resourceType.valid || resourceType.untouched ">Gradeis required </small>
+      </div>
+
+       <div class="col-md-6">
+        <label for="doj">Joining Date:</label>
+        <input type="userName" class="form-control" placeholder="Enter date" name="doj"[(ngModel)]="employee.doj" required #doj="ngModel"
+        [class.is-invalid]="doj.invalid && employeeId.touched " >
+        <small class="text-danger"[class.d-none]="doj.valid || doj.untouched ">Date of joiing is required </small>
+      </div>  
+       <!--   <input
+            class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model"
+            ngbDatepicker  #d="ngbDatepicker"/>
+          <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+        </div> 
+    -->
+      
+      <div class="col-md-6">
+        <label for="totalExp">Total Experinces:</label>
+        <input type="totalExp" class="form-control" placeholder="Total experinces" name="totalExp"[(ngModel)]="employee.totalExp" required #totalExp="ngModel"
+        [class.is-invalid]="totalExp.invalid && totalExp.touched " >
+        <small class="text-danger"[class.d-none]="totalExp.valid || totalExp.untouched "> Experinces is required </small>
+      </div>
+      <div class="col-md-6">
+        <label for="irm">IRM:</label>
+        <input type="irm" class="form-control" placeholder="Enter irm" name="employeeId"[(ngModel)]="employee.irm" required #irm="ngModel"
+        [class.is-invalid]="irm.invalid && irm.touched " >
+        <small class="text-danger"[class.d-none]="irm.valid || irm.untouched ">Reporting Manager is required </small>
+      </div>
+      
+      
+      <div class="col-md-6">
+        <label for="currentLocation">Current Loaction:</label>
+        <input type="currentLocation" class="form-control" placeholder="Enter current location" name="employeeId"[(ngModel)]="employee.currentLocation" required #currentLocation="ngModel"
+        [class.is-invalid]="currentLocation.invalid && currentLocation.touched " >
+        <small class="text-danger"[class.d-none]="currentLocation.valid || currentLocation.untouched "> Current Location is required </small>
+      </div>
+
+      <div class="col-md-6">
+        <label for="currentAllocation">Current Allocation:</label>
+        <select class="form-control" placeholder="Enter Current Allocation" name="employeeId"[(ngModel)]="employee.currentAllocation" required #currentAllocation="ngModel"
+        [class.is-invalid]="currentAllocation.invalid && currentAllocation.touched " >
+        <small class="text-danger"[class.d-none]="currentAllocation.valid || currentAllocation.untouched ">Current Allocation is required </small>
+        <option>Pune</option>
+        <option>Hyderbad</option>
+        <option>Bangolere</option>
+        </select></div>
+
+        <div class="col-md-6">
+        <label for="project">Project:</label>
+        <select type="project" class="form-control" placeholder="Enter project" name="employeeId"[(ngModel)]="employee.project" required #project="ngModel"
+        [class.is-invalid]="project.invalid && project.touched " >
+        <small class="text-danger"[class.d-none]="project.valid || project.untouched ">Current Allocation is required </small>
+      <option>Java Shared Pool</option>  
+      <option> Comptency Internal Project</option>  
+      <option>JD Project</option>  
+      <option>BNY Project</option> 
+      <option>Internal Traning</option> 
+      </select></div><br><br>
+   
+
+      <div class="button"> 
+      <button class="btn btn-success" type="submit" > Submit</button>
+    </div>
+  </form> 
+  <router-outlet></router-outlet>
+  </div>
+
+
